@@ -29,14 +29,14 @@ else
 		echo -e "Using the latest paper build"
 		BUILD_NUMBER=${LATEST_PAPER_BUILD}
 	fi
-	
+
 	echo "Version being downloaded"
 	echo -e "MC Version: ${MINECRAFT_VERSION}"
 	echo -e "Build: ${BUILD_NUMBER}"
 	DOWNLOAD_URL=https://papermc.io/api/v1/paper/${MINECRAFT_VERSION}/${BUILD_NUMBER}/download
 fi
-echo -e "running curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
-curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
+echo -e "Downloading..."
+curl -s -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
 # Replace Startup Variables
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
