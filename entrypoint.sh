@@ -38,7 +38,7 @@ else
 	echo -e "Build: ${BUILD_NUMBER}"
 	DOWNLOAD_URL=https://papermc.io/api/v1/paper/${MINECRAFT_VERSION}/${BUILD_NUMBER}/download
 fi
-cd /mnt/server
+cd /home/container
 echo -e "running curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
 curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
 
