@@ -8,7 +8,6 @@ java -version
 export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
 
 # Check auto update is on
-echo "Should auto update? ${AUTO_UPDATE} (${UPDATE_BRANCH})"
 if [ "${AUTO_UPDATE}" == "1" ]; then
 	echo "Checking for updates..."
 
@@ -22,7 +21,7 @@ if [ "${AUTO_UPDATE}" == "1" ]; then
 
 		echo "$LATEST_HASH" > ".currenthash"
 		echo "Updated!"
-	elif
+	else
 		echo "No update available"
 	fi
 fi
