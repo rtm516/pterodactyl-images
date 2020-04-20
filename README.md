@@ -1,4 +1,2 @@
-# More Pterodactyl Docker Images
-See the branches for the images
-
-[pterodactyl.io](https://pterodactyl.io/)
+# Containers: GeyserMC
+Container built for auto updating of GeyserMC, built upon https://github.com/pterodactyl/images/tree/java.
